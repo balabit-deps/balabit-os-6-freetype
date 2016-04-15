@@ -1,0 +1,35 @@
+Index: freetype-2.6.1/builds/unix/freetype-config.in
+===================================================================
+--- freetype-2.6.1.orig/builds/unix/freetype-config.in	2016-02-17 10:26:16.681010303 -0500
++++ freetype-2.6.1/builds/unix/freetype-config.in	2016-02-17 10:27:26.377806639 -0500
+@@ -16,7 +16,6 @@
+ exec_prefix="%exec_prefix%"
+ exec_prefix_set="no"
+ includedir="%includedir%"
+-libdir="%libdir%"
+ 
+ usage()
+ {
+@@ -88,6 +87,8 @@
+     ;;
+   --libtool)
+     echo_libtool=yes
++    echo 2>&1 "the use of the libfreetype6.la file is deprecated in Debian/Ubuntu"
++    exit 1
+     ;;
+   --static)
+     show_static=yes
+@@ -145,12 +146,7 @@
+   if test "$show_static" = "yes" ; then
+     libs="$staticlibs"
+   fi
+-  if test "${SYSROOT}$libdir" != "/usr/lib"  &&
+-     test "${SYSROOT}$libdir" != "/usr/lib64"; then
+-    echo -L${SYSROOT}$libdir $libs
+-  else
+-    echo $libs
+-  fi
++  echo $libs
+ fi
+ 
+ if test "$echo_libtool" = "yes" ; then
