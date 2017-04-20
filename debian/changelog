@@ -1,3 +1,12 @@
+freetype (2.6.1-0.1ubuntu2.2) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: heap based buffer overflow in cff_parser_run()
+    - debian/patches-freetype/CVE-2016-10328.patch: add additional check
+      to parser stack size in src/cff/cffparse.c
+    - CVE-2016-10328
+
+ -- Steve Beattie <sbeattie@ubuntu.com>  Wed, 19 Apr 2017 17:29:18 -0700
+
 freetype (2.6.1-0.1ubuntu2.1) xenial-security; urgency=medium
 
   * SECURITY UPDATE: DoS and possible code execution via missing glyph name
