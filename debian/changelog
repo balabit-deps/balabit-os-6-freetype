@@ -1,3 +1,16 @@
+freetype (2.6.1-0.1ubuntu2.3) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: out-of-bounds write in t1_decoder_parse_charstrings
+    - debian/patches-freetype/CVE-2017-8105.patch: add a check to
+      src/psaux/t1decode.c.
+    - CVE-2017-8105
+  * SECURITY UPDATE: out-of-bounds write in t1_builder_close_contour
+    - debian/patches-freetype/CVE-2017-8287.patch: add a check to
+      src/psaux/psobjs.c.
+    - CVE-2017-8287
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Thu, 04 May 2017 11:56:21 -0400
+
 freetype (2.6.1-0.1ubuntu2.2) xenial-security; urgency=medium
 
   * SECURITY UPDATE: heap based buffer overflow in cff_parser_run()

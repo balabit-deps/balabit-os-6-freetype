@@ -7,3 +7,5 @@ verbose-libtool.patch
 freetype-config.diff
 CVE-2016-10244.patch
 CVE-2016-10328.patch
+CVE-2017-8105.patch
+CVE-2017-8287.patch
