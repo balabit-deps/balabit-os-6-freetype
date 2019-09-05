@@ -1,3 +1,13 @@
+freetype (2.6.1-0.1ubuntu2.4) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: heap-based buffer over-read
+    - debian/patches-freetype/CVE-2015-9383.patch: check
+      limit before accessing 'numRanges' and numMappings in
+      src/sfnt/ttcmap.c.
+    - CVE-2015-9383
+
+ -- Leonidas S. Barbosa <leo.barbosa@canonical.com>  Thu, 05 Sep 2019 15:14:37 -0300
+
 freetype (2.6.1-0.1ubuntu2.3) xenial-security; urgency=medium
 
   * SECURITY UPDATE: out-of-bounds write in t1_decoder_parse_charstrings
