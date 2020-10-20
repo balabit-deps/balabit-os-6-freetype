@@ -1,3 +1,14 @@
+freetype (2.6.1-0.1ubuntu2.5) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: heap buffer overflow via integer truncation in
+    Load_SBit_Png
+    - debian/patches-freetype/CVE-2020-15999.patch: Update
+      src/sfnt/pngshim.c to test and reject invalid bitmap size earlier in
+      Load_SBit_Png. Based on upstream patch.
+    - CVE-2020-15999
+
+ -- Alex Murray <alex.murray@canonical.com>  Tue, 20 Oct 2020 12:53:06 +1030
+
 freetype (2.6.1-0.1ubuntu2.4) xenial-security; urgency=medium
 
   * SECURITY UPDATE: heap-based buffer over-read
